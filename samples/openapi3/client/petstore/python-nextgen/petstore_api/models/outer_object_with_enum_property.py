@@ -63,8 +63,7 @@ class OuterObjectWithEnumProperty(BaseModel):
                 _dict[_key] = _value
 
         # set to None if str_value (nullable) is None
-        # and __fields_set__ contains the field
-        if self.str_value is None and "str_value" in self.__fields_set__:
+        if self.str_value is None:
             _dict['str_value'] = None
 
         return _dict

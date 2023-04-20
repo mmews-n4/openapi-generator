@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class ApiResponse: NSObject, Codable, JSONEncodable {
+@objc public class ApiResponse: NSObject, Codable, JSONEncodable {
 
     public var code: Int?
     public var codeNum: NSNumber? {

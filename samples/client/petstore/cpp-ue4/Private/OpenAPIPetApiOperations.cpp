@@ -382,7 +382,7 @@ void OpenAPIPetApi::UpdatePetWithFormRequest::SetupHttpRequest(const FHttpReques
 	// Default to Json Body request
 	if (Consumes.Num() == 0 || Consumes.Contains(TEXT("application/json")))
 	{
-		// Form parameters added to try to generate a json body when no body parameters are specified.
+		// Form parameters
 		FString JsonBody;
 		JsonWriter Writer = TJsonWriterFactory<>::Create(&JsonBody);
 		Writer->WriteObjectStart();
@@ -470,7 +470,7 @@ void OpenAPIPetApi::UploadFileRequest::SetupHttpRequest(const FHttpRequestRef& H
 	// Default to Json Body request
 	if (Consumes.Num() == 0 || Consumes.Contains(TEXT("application/json")))
 	{
-		// Form parameters added to try to generate a json body when no body parameters are specified.
+		// Form parameters
 		FString JsonBody;
 		JsonWriter Writer = TJsonWriterFactory<>::Create(&JsonBody);
 		Writer->WriteObjectStart();
@@ -478,7 +478,10 @@ void OpenAPIPetApi::UploadFileRequest::SetupHttpRequest(const FHttpRequestRef& H
 			Writer->WriteIdentifierPrefix(TEXT("additionalMetadata"));
 			WriteJsonValue(Writer, AdditionalMetadata.GetValue());
 		}
-		UE_LOG(LogOpenAPI, Error, TEXT("Form parameter (file) was ignored, Files are not supported in json body"));
+		if (File.IsSet()){
+			Writer->WriteIdentifierPrefix(TEXT("file"));
+			WriteJsonValue(Writer, File.GetValue());
+		}
 		Writer->WriteObjectEnd();
 		Writer->Close();
 		HttpRequest->SetHeader(TEXT("Content-Type"), TEXT("application/json; charset=utf-8"));

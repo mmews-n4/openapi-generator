@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class NumberOnly: NSObject, Codable, JSONEncodable {
+@objc public class NumberOnly: NSObject, Codable, JSONEncodable {
 
     public var justNumber: Double?
 

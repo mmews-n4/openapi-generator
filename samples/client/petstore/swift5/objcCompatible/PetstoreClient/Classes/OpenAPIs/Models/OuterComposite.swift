@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class OuterComposite: NSObject, Codable, JSONEncodable {
+@objc public class OuterComposite: NSObject, Codable, JSONEncodable {
 
     public var myNumber: Double?
     public var myString: String?

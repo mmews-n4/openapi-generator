@@ -182,7 +182,7 @@ conf = {{{packageName}}}.Configuration(
         server_variables=None,
         server_operation_index=None,
         server_operation_variables=None,
-{{#or hasOAuthMethods hasHttpBearerMethods}}
+{{#or hasOAuthMethods hasBearerMethods}}
         access_token=None,
 {{/or}}
     ):
@@ -235,7 +235,7 @@ conf = {{{packageName}}}.Configuration(
         """The HTTP signing configuration
         """
 {{/if}}
-{{#or hasOAuthMethods hasHttpBearerMethods}}
+{{#or hasOAuthMethods hasBearerMethods}}
         self.access_token = None
         """access token for OAuth/Bearer
         """

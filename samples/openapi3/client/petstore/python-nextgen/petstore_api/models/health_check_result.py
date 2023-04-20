@@ -60,8 +60,7 @@ class HealthCheckResult(BaseModel):
                 _dict[_key] = _value
 
         # set to None if nullable_message (nullable) is None
-        # and __fields_set__ contains the field
-        if self.nullable_message is None and "nullable_message" in self.__fields_set__:
+        if self.nullable_message is None:
             _dict['NullableMessage'] = None
 
         return _dict

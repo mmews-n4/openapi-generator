@@ -6,4 +6,3 @@ additionalProperties:
   packageName: petstore_api
   useOneOfDiscriminatorLookup: "true"
   disallowAdditionalPropertiesIfNotPresent: false
-  mapNumberTo: StrictFloat

@@ -812,11 +812,6 @@ public class SpringCodegen extends AbstractJavaCodegen
                             public void setReturnContainer(final String returnContainer) {
                                 resp.containerType = returnContainer;
                             }
-
-                            @Override
-                            public void setIsVoid(boolean isVoid) {
-                                resp.isVoid = isVoid;
-                            }
                         });
                     }
                 }
@@ -831,11 +826,6 @@ public class SpringCodegen extends AbstractJavaCodegen
                     @Override
                     public void setReturnContainer(final String returnContainer) {
                         operation.returnContainer = returnContainer;
-                    }
-
-                    @Override
-                    public void setIsVoid(boolean isVoid) {
-                        operation.isVoid = isVoid;
                     }
                 });
 
@@ -858,8 +848,6 @@ public class SpringCodegen extends AbstractJavaCodegen
         void setReturnType(String returnType);
 
         void setReturnContainer(String returnContainer);
-
-        void setIsVoid(boolean isVoid);
     }
 
     /**
@@ -871,7 +859,6 @@ public class SpringCodegen extends AbstractJavaCodegen
         final String rt = returnType;
         if (rt == null) {
             dataTypeAssigner.setReturnType("Void");
-            dataTypeAssigner.setIsVoid(true);
         } else if (rt.startsWith("List") || rt.startsWith("java.util.List")) {
             final int start = rt.indexOf("<");
             final int end = rt.lastIndexOf(">");

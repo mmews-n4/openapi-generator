@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class MixedPropertiesAndAdditionalPropertiesClass: NSObject, Codable, JSONEncodable {
+@objc public class MixedPropertiesAndAdditionalPropertiesClass: NSObject, Codable, JSONEncodable {
 
     public var uuid: UUID?
     public var dateTime: Date?

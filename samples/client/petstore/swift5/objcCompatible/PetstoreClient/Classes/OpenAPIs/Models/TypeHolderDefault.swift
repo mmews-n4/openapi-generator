@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class TypeHolderDefault: NSObject, Codable, JSONEncodable {
+@objc public class TypeHolderDefault: NSObject, Codable, JSONEncodable {
 
     public var stringItem: String = "what"
     public var numberItem: Double

@@ -24,13 +24,12 @@ This can only be done by the logged in user.
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
-from petstore_api.models.user import User
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -50,7 +49,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->create_user: %s\n" % e)
 ```
-
 
 ### Parameters
 
@@ -88,13 +86,12 @@ Creates list of users with given input array
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
-from petstore_api.models.user import User
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -114,7 +111,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->create_users_with_array_input: %s\n" % e)
 ```
-
 
 ### Parameters
 
@@ -152,13 +148,12 @@ Creates list of users with given input array
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
-from petstore_api.models.user import User
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -178,7 +173,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->create_users_with_list_input: %s\n" % e)
 ```
-
 
 ### Parameters
 
@@ -216,12 +210,12 @@ This can only be done by the logged in user.
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -241,7 +235,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->delete_user: %s\n" % e)
 ```
-
 
 ### Parameters
 
@@ -280,13 +273,12 @@ Get user by user name
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
-from petstore_api.models.user import User
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -308,7 +300,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->get_user_by_name: %s\n" % e)
 ```
-
 
 ### Parameters
 
@@ -348,12 +339,12 @@ Logs user into the system
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -376,7 +367,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->login_user: %s\n" % e)
 ```
-
 
 ### Parameters
 
@@ -416,12 +406,12 @@ Logs out current logged in user session
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -440,7 +430,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->logout_user: %s\n" % e)
 ```
-
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -475,13 +464,12 @@ This can only be done by the logged in user.
 ### Example
 
 ```python
+from __future__ import print_function
 import time
 import os
 import petstore_api
-from petstore_api.models.user import User
 from petstore_api.rest import ApiException
 from pprint import pprint
-
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
@@ -502,7 +490,6 @@ with petstore_api.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling UserApi->update_user: %s\n" % e)
 ```
-
 
 ### Parameters
 

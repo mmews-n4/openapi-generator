@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers open class AnotherFakeAPI : NSObject {
+@objc open class AnotherFakeAPI : NSObject {
 
     /**
      To test special tags

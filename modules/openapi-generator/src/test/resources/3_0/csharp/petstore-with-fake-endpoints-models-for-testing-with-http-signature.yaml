@@ -2260,12 +2260,3 @@ components:
       properties:
         value:
           type: string
-    LiteralStringClass:
-      type: object
-      properties:
-        escapedLiteralString:
-          type: string
-          default: C:\\Users\\username
-        unescapedLiteralString:
-          type: string
-          default: C:\Users\username

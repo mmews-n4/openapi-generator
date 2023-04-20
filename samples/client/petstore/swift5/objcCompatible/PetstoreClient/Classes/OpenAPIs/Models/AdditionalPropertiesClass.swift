@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class AdditionalPropertiesClass: NSObject, Codable, JSONEncodable {
+@objc public class AdditionalPropertiesClass: NSObject, Codable, JSONEncodable {
 
     public var mapString: [String: String]?
     public var mapMapString: [String: [String: String]]?

@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class SpecialModelName: NSObject, Codable, JSONEncodable {
+@objc public class SpecialModelName: NSObject, Codable, JSONEncodable {
 
     public var specialPropertyName: Int64?
     public var specialPropertyNameNum: NSNumber? {

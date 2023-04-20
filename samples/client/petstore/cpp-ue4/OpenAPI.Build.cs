@@ -22,7 +22,7 @@ public class OpenAPI : ModuleRules
             new string[]
             {
                 "Core",
-                "HTTP",
+                "Http",
                 "Json",
             }
         );

@@ -133,6 +133,7 @@ func (c *PetApiController) DeletePet(w http.ResponseWriter, r *http.Request) {
 		c.errorHandler(w, r, &ParsingError{Err: err}, nil)
 		return
 	}
+
 	apiKeyParam := r.Header.Get("api_key")
 	result, err := c.service.DeletePet(r.Context(), petIdParam, apiKeyParam)
 	// If an error occurred, encode the error with the status code
@@ -184,6 +185,7 @@ func (c *PetApiController) GetPetById(w http.ResponseWriter, r *http.Request) {
 		c.errorHandler(w, r, &ParsingError{Err: err}, nil)
 		return
 	}
+
 	result, err := c.service.GetPetById(r.Context(), petIdParam)
 	// If an error occurred, encode the error with the status code
 	if err != nil {
@@ -231,6 +233,7 @@ func (c *PetApiController) UpdatePetWithForm(w http.ResponseWriter, r *http.Requ
 		c.errorHandler(w, r, &ParsingError{Err: err}, nil)
 		return
 	}
+
 				nameParam := r.FormValue("name")
 				statusParam := r.FormValue("status")
 	result, err := c.service.UpdatePetWithForm(r.Context(), petIdParam, nameParam, statusParam)
@@ -256,6 +259,7 @@ func (c *PetApiController) UploadFile(w http.ResponseWriter, r *http.Request) {
 		c.errorHandler(w, r, &ParsingError{Err: err}, nil)
 		return
 	}
+
 				additionalMetadataParam := r.FormValue("additionalMetadata")
 	
 	fileParam, err := ReadFormFileToTempFile(r, "file")

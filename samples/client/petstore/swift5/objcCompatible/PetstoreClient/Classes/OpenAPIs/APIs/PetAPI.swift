@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers open class PetAPI : NSObject {
+@objc open class PetAPI : NSObject {
 
     /**
      Add a new pet to the store

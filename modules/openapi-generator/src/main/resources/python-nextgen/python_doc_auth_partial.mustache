@@ -64,12 +64,9 @@ configuration = {{{packageName}}}.Configuration(
 # the API server.
 #
 # See {{{packageName}}}.signing for a list of all supported parameters.
-from {{{packageName}}} import signing
-import datetime
-
 configuration = {{{packageName}}}.Configuration(
     host = "{{{basePath}}}",
-    signing_info = {{{packageName}}}.HttpSigningConfiguration(
+    signing_info = {{{packageName}}}.signing.HttpSigningConfiguration(
         key_id = 'my-key-id',
         private_key_path = 'private_key.pem',
         private_key_passphrase = 'YOUR_PASSPHRASE',

@@ -8,14 +8,14 @@ cd build
 
 cmake ..
 
-cmake --build .
+make
 
 if [[ -z "${RUN_VALGRIND_TESTS}" ]]; then
-    echo "Running Qt Petstore Tests"
-    ctest
+    echo "Running Qt5 Petstore Tests"
+    ./cpp-qt5-petstore
 else
-  echo "Running Qt Petstore Tests with Valgrind"
-  valgrind --leak-check=full ./cpp-qt-petstore |& tee result.log || exit 1
+  echo "Running Qt5 Petstore Tests with Valgrind"
+  valgrind --leak-check=full ./cpp-qt5-petstore |& tee result.log || exit 1
   testCount=$(cat result.log | grep 'Finished testing of' | wc -l)
   if [ $testCount == 3 ]
   then

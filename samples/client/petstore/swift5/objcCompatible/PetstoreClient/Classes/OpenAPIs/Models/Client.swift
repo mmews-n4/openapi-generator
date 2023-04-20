@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-@objcMembers public class Client: NSObject, Codable, JSONEncodable {
+@objc public class Client: NSObject, Codable, JSONEncodable {
 
     public var client: String?
 

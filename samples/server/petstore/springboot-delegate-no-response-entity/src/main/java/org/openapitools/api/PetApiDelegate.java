@@ -60,7 +60,7 @@ public interface PetApiDelegate {
      * @return Invalid pet value (status code 400)
      * @see PetApi#deletePet
      */
-    default void deletePet(Long petId,
+    default Void deletePet(Long petId,
         String apiKey) {
         throw new IllegalArgumentException("Not implemented");
 
@@ -195,7 +195,7 @@ public interface PetApiDelegate {
      * @return Invalid input (status code 405)
      * @see PetApi#updatePetWithForm
      */
-    default void updatePetWithForm(Long petId,
+    default Void updatePetWithForm(Long petId,
         String name,
         String status) {
         throw new IllegalArgumentException("Not implemented");
